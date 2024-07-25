@@ -26,8 +26,8 @@ This project is a plugin for Rundeck that provides HTTP notification capabilitie
 ### Steps
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone https://github.com/benjamon99/rundeck-http-plugin.git
+   cd your-folder
    ```
 
 2. **Build the project**:
