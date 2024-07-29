@@ -21,6 +21,7 @@ This project is a plugin for Rundeck that provides HTTP notification capabilitie
 ## Installation
 ### Prerequisites
 - Java 11 or higher
+- Maven 3.6 or higher
 - Gradle 6.0.1 or higher
 
 ### Steps
