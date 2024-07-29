@@ -54,7 +54,7 @@ To use the plugin in your Rundeck instance, follow these steps:
    - Restart the Rundeck service to load the new plugin.
 
 4. **Add a Job**:
-   -Once installed, the plugin can be used in your Rundeck jobs. Configure the plugin in the "Notitfications" tab and add at least one Workflow (e.g Command).
+   - Once installed, the plugin can be used in your Rundeck jobs. Configure the plugin in the "Notitfications" tab and add at least one Workflow (e.g Command).
 
 ## Configuration
 ### Plugin Configuration
