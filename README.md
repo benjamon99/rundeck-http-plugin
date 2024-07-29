@@ -21,7 +21,7 @@ This project is a plugin for Rundeck that provides HTTP notification capabilitie
 ## Installation
 ### Prerequisites
 - Java 11 or higher
-- Maven 3.6 or higher
+- Gradle 6.0.1 or higher
 
 ### Steps
 1. **Clone the repository**:
@@ -32,7 +32,7 @@ This project is a plugin for Rundeck that provides HTTP notification capabilitie
 
 2. **Build the project**:
    ```sh
-   mvn clean install
+   ./gradlew clean build
    ```
 
 ## Usage
@@ -41,11 +41,20 @@ To use the plugin in your Rundeck instance, follow these steps:
 
 1. **Build the plugin JAR**:
    ```sh
-   mvn package
+   ./gradlew clean build
    ```
 
-2. **Deploy the JAR**:
-   Copy the generated JAR file from the `target` directory to the `libext` directory of your Rundeck installation.
+2. **Copy the JAR File**:
+   - After building, the JAR file will be located in the `build/libs` directory.
+   - Copy the JAR file to the `libext` directory of your Rundeck installation:
+     ```sh
+     cp build/libs/http-plugin-exercise-1.0.0-SNAPSHOT /path/to/rundeck/libext/
+     ```
+3. **Restart Rundeck**:
+   - Restart the Rundeck service to load the new plugin.
+
+4. **Add a Job:
+   -Once installed, the plugin can be used in your Rundeck jobs. Configure the plugin in the "Notitfications" tab and add at least one Workflow (e.g Command).
 
 ## Configuration
 ### Plugin Configuration
@@ -57,7 +66,13 @@ The plugin can be configured using the following parameters:
 
 ## Testing
 ### Running Unit Tests
-To run the unit tests, use the following command:
+1. **To run the unit tests, use the following command**:
+   ```sh
+   ./gradlew test
+   ```
+
+2. **View Test Results**: 
+After running the tests, you can view the test results in the `build/reports/tests/test/index.html` file. Open this file in a web browser to see the detailed test report.
 
 ## Generating Javadoc
 To generate Javadoc for the project, follow these steps:
@@ -68,8 +83,5 @@ To generate Javadoc for the project, follow these steps:
    ```
    
 2. **View the Javadoc site**:
-   Open the `index.html` file located in the `target/site/apidocs` directory with any web browser to view the generated Javadoc.
+   Open the `index.html` file located in the `rundeck-http-plugin\build\docs\javadoc` directory with any web browser to view the generated Javadoc.
 
-```sh
-mvn test
-```

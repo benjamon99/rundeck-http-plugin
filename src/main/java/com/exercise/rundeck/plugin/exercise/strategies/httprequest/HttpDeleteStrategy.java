@@ -1,9 +1,9 @@
-package main.java.com.exercise.rundeck.plugin.exercise.strategies.httprequest;
+package com.exercise.rundeck.plugin.exercise.strategies.httprequest;
 
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpRequestBase;
 
-import main.java.com.exercise.rundeck.plugin.exercise.interfaces.HttpRequestStrategy;
+import com.exercise.rundeck.plugin.exercise.interfaces.HttpRequestStrategy;
 /**
  * Strategy implementation for creating HTTP DELETE requests.
  */

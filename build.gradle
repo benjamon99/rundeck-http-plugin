@@ -1,0 +1,47 @@
+version = '1.0.0-SNAPSHOT'
+defaultTasks 'clean','build'
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+sourceCompatibility = 1.8
+ext.rundeckPluginVersion= '1.2'
+ext.rundeckVersion= '5.4.0-20240618'
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.rundeck:rundeck-core:' + rundeckVersion + '@jar'
+    
+    testImplementation 'junit:junit:3.8.1@jar'
+    testImplementation 'org.mockito:mockito-all:1.8.5'
+    testImplementation 'org.codehaus.groovy:groovy-all:2.3.7'
+    testImplementation 'org.spockframework:spock-core:0.7-groovy-2.0'
+    
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+}
+
+ext.pluginClassNames='com.exercise.rundeck.plugin.exercise.HttpNotificationPlugin'
+jar {
+    archiveBaseName.set('http-plugin-exercise')
+    manifest {
+        attributes 'Rundeck-Plugin-Classnames': pluginClassNames
+        attributes 'Rundeck-Plugin-File-Version': version
+        attributes 'Rundeck-Plugin-Version': rundeckPluginVersion, 'Rundeck-Plugin-Archive': 'true'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// task wrapper(type: Wrapper) {
+//     gradleVersion = '6.0.1'
+// }
+

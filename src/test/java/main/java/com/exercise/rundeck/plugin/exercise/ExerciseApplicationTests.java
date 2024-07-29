@@ -13,11 +13,11 @@ import org.apache.http.message.BasicStatusLine;
 import org.apache.http.HttpVersion;
 import org.junit.jupiter.api.Test;
 
-import main.java.com.exercise.rundeck.plugin.exercise.interfaces.HttpRequestStrategy;
-import main.java.com.exercise.rundeck.plugin.exercise.strategies.httprequest.HttpDeleteStrategy;
-import main.java.com.exercise.rundeck.plugin.exercise.strategies.httprequest.HttpGetStrategy;
-import main.java.com.exercise.rundeck.plugin.exercise.strategies.httprequest.HttpPostStrategy;
-import main.java.com.exercise.rundeck.plugin.exercise.strategies.httprequest.HttpPutStrategy;
+import com.exercise.rundeck.plugin.exercise.interfaces.HttpRequestStrategy;
+import com.exercise.rundeck.plugin.exercise.strategies.httprequest.HttpDeleteStrategy;
+import com.exercise.rundeck.plugin.exercise.strategies.httprequest.HttpGetStrategy;
+import com.exercise.rundeck.plugin.exercise.strategies.httprequest.HttpPostStrategy;
+import com.exercise.rundeck.plugin.exercise.strategies.httprequest.HttpPutStrategy;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -274,6 +274,4 @@ class ExcerciseApplicationTests {
     assertEquals(400, response.getStatusLine().getStatusCode());
     assertEquals(url, request.getURI().toString());
   }
-
-  // hacer readme
 }

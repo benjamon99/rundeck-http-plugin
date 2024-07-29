@@ -1,4 +1,4 @@
-package main.java.com.exercise.rundeck.plugin.exercise.interfaces;
+package com.exercise.rundeck.plugin.exercise.interfaces;
 
 import org.apache.http.client.methods.HttpRequestBase;
 /**
