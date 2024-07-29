@@ -3,7 +3,7 @@ defaultTasks 'clean','build'
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'idea'
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 ext.rundeckPluginVersion= '1.2'
 ext.rundeckVersion= '5.4.0-20240618'
 
